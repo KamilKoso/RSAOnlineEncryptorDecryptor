@@ -13,12 +13,12 @@ namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
-      private IRsaAlgorithm rsa= new RSAAlgorithm();
+        private IRsaAlgorithm rsa;
 
-       // HomeController(IRsaAlgorithm rsaAlgorithm)
-        //{
-       //     this.rsa = rsaAlgorithm;
-       // }
+       public HomeController(IRsaAlgorithm rsaAlgorithm)
+        {
+            this.rsa = rsaAlgorithm;
+        }
 
         public ActionResult Index()
         {
@@ -33,7 +33,8 @@ namespace WebUI.Controllers
 
         public PartialViewResult GetWalletData()
         {
-            
+            //Each request causes creating new Controller model, which causes creating new RSAAlgorithm model, so key values
+            //will be different each time thanks to setValues() method in RSAAlgorithm constructor
             WalletViewModel walletModel = new WalletViewModel() { d = rsa.d, e = rsa.e, n=rsa.n  };
             return PartialView("WalletDataPartialView",walletModel);
         }
