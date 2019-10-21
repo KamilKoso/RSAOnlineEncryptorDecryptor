@@ -1,0 +1,26 @@
+﻿@model WebUI.Models.MessageViewModel
+@{
+    ViewBag.Title = "EncodePartialView";
+}
+
+<div class="container">
+    <div class="row">
+    <div class="jumbotron">
+        <div class="col-md-4">
+            @using (Ajax.BeginForm(new AjaxOptions() { }))
+            {
+                @Html.TextAreaFor(m=>m.message)
+                @Html.TextBoxFor(m=>m.n)
+                @Html.TextBoxFor(m => m.d)
+            }
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            @Html.Action("GetEncodedMessage")
+        </div>
+    </div>
+    </div>
+</div>
+

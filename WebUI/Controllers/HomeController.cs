@@ -14,6 +14,7 @@ namespace WebUI.Controllers
     public class HomeController : Controller
     {
         private IRsaAlgorithm rsa;
+        private MessageViewModel messageViewModel;
 
        public HomeController(IRsaAlgorithm rsaAlgorithm)
         {
@@ -31,12 +32,26 @@ namespace WebUI.Controllers
             return PartialView("WalletPartialView");
         }
 
+        
         public PartialViewResult GetWalletData()
         {
             //Each request causes creating new Controller model, which causes creating new RSAAlgorithm model, so key values
             //will be different each time thanks to setValues() method in RSAAlgorithm constructor
-            WalletViewModel walletModel = new WalletViewModel() { d = rsa.d, e = rsa.e, n=rsa.n  };
-            return PartialView("WalletDataPartialView",walletModel);
+            MessageViewModel messageModel = new MessageViewModel() { d = rsa.d, e = rsa.e, n=rsa.n  };
+            
+            return PartialView("WalletDataPartialView", messageModel);
+        }
+
+        public PartialViewResult MessageEncoder()
+        {
+            
+            return PartialView("EncodePartialView");
+        }
+
+        public PartialViewResult GetEncodedMessage(MessageViewModel messageView)
+        {
+
+            return PartialView("EncodeDataPartialView");
         }
     }
 }

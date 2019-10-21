@@ -17,7 +17,7 @@ namespace Domain.Entities
         public int e { get; set; }
         public int d { get; set; }
         public int n { get; set; }
-        public int randomPrimeMaxValue { get; set; } = 10000;
+        public int randomPrimeMaxValue { get; set; } = 100;
 
         public RSAAlgorithm()
         {
