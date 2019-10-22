@@ -3,24 +3,27 @@
     ViewBag.Title = "EncodePartialView";
 }
 
-<div class="container">
-    <div class="row">
-    <div class="jumbotron">
-        <div class="col-md-4">
-            @using (Ajax.BeginForm(new AjaxOptions() { }))
-            {
-                @Html.TextAreaFor(m=>m.message)
-                @Html.TextBoxFor(m=>m.n)
-                @Html.TextBoxFor(m => m.d)
-            }
-        </div>
-        <div class="col-md-4">
+<div class="container-fluid">
+    <div class="jumbotron ">
+        <div class="row form-group ">
+            <div class="col-md-6">
+                @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "KeyValues", LoadingElementId = "loading", LoadingElementDuration = 300, Url = Url.Action("GetWalletData"), OnBegin = "hide('KeyValues')", OnComplete = "show('KeyValues')", HttpMethod = "Post" }))
+                {
+                    @Html.TextAreaFor(m => m.message,10,10, new { style = "width:100%; height:100%; max-width:100%; resize:none;" })
+                    <div class="form-inline">
+                        @Html.TextBoxFor(m => m.n, new { style = "width:10%; height:10%;" })
+                        @Html.TextBoxFor(m => m.d, new { style = "width:10%; height:10%;" })
+                    </div>
+                }
+            </div>
 
+
+
+            <div class="col-md-6">
+                @Html.Action("GetEncodedMessage")
+
+            </div>
         </div>
-        <div class="col-md-4">
-            @Html.Action("GetEncodedMessage")
-        </div>
-    </div>
     </div>
 </div>
 

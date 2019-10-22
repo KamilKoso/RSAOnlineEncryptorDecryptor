@@ -10,6 +10,6 @@ namespace WebUI.Models
         public int n { get; set; }
         public int e { get; set; }
         public int d { get; set; }
-        string message { get; set; }
+        public string message { get; set; }
     }
 }
