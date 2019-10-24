@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Domain.Abstract;
 using Domain.Entities;
 using WebUI.Models;
+using System.Numerics;
 
 
 
@@ -14,7 +15,7 @@ namespace WebUI.Controllers
     public class HomeController : Controller
     {
         private IRsaAlgorithm rsa;
-        private MessageViewModel messageViewModel;
+        
 
        public HomeController(IRsaAlgorithm rsaAlgorithm)
         {
@@ -50,8 +51,15 @@ namespace WebUI.Controllers
 
         public PartialViewResult GetEncodedMessage(MessageViewModel messageView)
         {
-
-            return PartialView("EncodeDataPartialView");
+            if (messageView.message != null)
+            {
+                List<BigInteger> encodedLetters = rsa.EncodeMessage(messageView.message, messageView.n, messageView.e);
+                return PartialView("EncodeDataPartialView", encodedLetters);
+            }
+            else
+            {
+                return PartialView("EncodeDataPartialView");
+            }
         }
     }
 }
