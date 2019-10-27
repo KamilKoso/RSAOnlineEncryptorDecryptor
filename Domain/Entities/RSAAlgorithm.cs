@@ -139,18 +139,19 @@ namespace Domain.Entities
             return true;
         }
 
-        public List<BigInteger> EncodeMessage(string message, int n, int e)
+        public List<int> EncodeMessage(string message, int n, int e)
         {
-            List<BigInteger> codedLetters = new List<BigInteger>();
+            List<int> codedLetters = new List<int>();
             for (int i = 0; i < message.Length; i++)
             {
                 int letterinASCII = message[i];
-                codedLetters.Add(BigInteger.Pow(letterinASCII, e) % n);
+                BigInteger calculationBigInt = BigInteger.Pow(letterinASCII, e) % n;
+                codedLetters.Add((int)calculationBigInt);
             }
             return codedLetters;
         }
 
-        public string DecodeMessage(List<BigInteger> codedList, int n, int d)
+        public string DecodeMessage(List<int> codedList, int n, int d)
         {
             string message = "";
             foreach (var i in codedList)

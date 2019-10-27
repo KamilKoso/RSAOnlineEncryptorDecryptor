@@ -1,7 +1,15 @@
-﻿<!--@model List<BigInteger> NIE WIADOMO CZEMU ALE NIE DZIALA:) -->
-@{
+﻿@model List<int>
+@{ 
  ViewBag.Title = "MessageViewModel";
 }
 
-
+<div id="EncodedMessage">
+    @if (Model != null)
+    {
+        foreach (int i in Model)
+        {
+        <p>@i</p>
+        }
+    }
+</div>
 

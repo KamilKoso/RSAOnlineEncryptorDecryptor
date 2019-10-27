@@ -53,7 +53,7 @@ namespace WebUI.Controllers
         {
             if (messageView.message != null)
             {
-                List<BigInteger> encodedLetters = rsa.EncodeMessage(messageView.message, messageView.n, messageView.e);
+                List<int> encodedLetters = rsa.EncodeMessage(messageView.message, messageView.n, messageView.e);
                 return PartialView("EncodeDataPartialView", encodedLetters);
             }
             else
