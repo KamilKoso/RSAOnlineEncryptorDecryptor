@@ -10,23 +10,23 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "EncodedMessage", LoadingElementId = "encoding", LoadingElementDuration = 300, Url = Url.Action("GetEncodedMessage"), OnBegin = "hide('KeyValues')", HttpMethod = "Post" }))
+                    @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "EncodedMessage", LoadingElementId = "encoding", LoadingElementDuration = 300, Url = Url.Action("GetEncodedMessage"), HttpMethod = "Post" }))
                     {
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-11">
                                 @Html.TextAreaFor(m => m.message, 10, 10, new { style = "width:100%; height:100%; max-width:100%; resize:none;", @class = "form-control" })
                             </div>
-                            <div class="col-md-1 align-self-center">
-                                <button type="submit" class="btn btn-success " style="background:none;">
+                            <div class="col-md-1 align-self-center" style="z-index:1;">
+                                <button type="submit" class="btn btn-sm btn-success " >
                                       Encode !
                                 </button>
                         </div>
                             </div>
                         
                             <div class="form-inline mt-2">
-                                @Html.TextBoxFor(m => m.n, new { style = "width:10%; height:10%;", @class = "form-control" })
-                                @Html.TextBoxFor(m => m.e, new { style = "width:10%; height:10%;", @class = "form-control ml-2" })
+                                @Html.TextBoxFor(m => m.n, new { style = "width:30%; height:10%;", @class = "form-control" })
+                                @Html.TextBoxFor(m => m.e, new { style = "width:30%; height:10%;", @class = "form-control ml-2" })
                         </div>
                     </div>
                     }
