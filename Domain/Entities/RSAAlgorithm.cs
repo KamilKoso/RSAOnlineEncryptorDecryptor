@@ -47,11 +47,11 @@ namespace Domain.Entities
                 int randomNum = 0;
                 randomNum = random.Next(randomPrimeMaxValue);
                 if (randomNum % 2 == 0)
-                    randomNum = randomNum / 2;
+                    randomNum = randomNum--;
                 if (isPrime(randomNum))
                 {
                     return randomNum;
-                    break;
+                    
                 }
             }
         }
