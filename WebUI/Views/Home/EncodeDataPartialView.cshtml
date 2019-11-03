@@ -4,12 +4,15 @@
 }
 
 <div id="EncodedMessage">
+
+    <textarea readonly="readonly" rows="10" cols="10" style="width:100%; height:100%; max-width:100%; resize:none;" class="form-control ml-4">
     @if (Model != null)
     {
         foreach (int i in Model)
         {
-        <p>@i</p>
+        @i 
         }
     }
+ </textarea>
 </div>
 

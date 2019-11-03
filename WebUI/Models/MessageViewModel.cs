@@ -14,7 +14,7 @@ namespace WebUI.Models
         public int e { get; set; }
         [Display(Name ="D")]
         public int d { get; set; }
-        [Display(Name ="Wprowadź wiadomość do zakodowania")]
+        [Display(Name ="Enter your message to encode")]
         public string message { get; set; }
     }
 }
