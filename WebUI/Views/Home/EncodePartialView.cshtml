@@ -5,15 +5,17 @@
 
 
 <div class="container-fluid">
-    <div class="jumbotron ">
+    <div class="jumbotron">
         <div class="row">
             <div class="col-md-6">
                 
                     @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "EncodedMessage", LoadingElementId = "encoding", LoadingElementDuration = 300, Url = Url.Action("GetEncodedMessage"), HttpMethod = "Post" }))
                     {
+                        @Html.AntiForgeryToken()
                       <div class="has-float-label">
-                       @Html.TextAreaFor(m => m.message, 10, 10, new { style = "width:100%; height:100%; max-width:100%; resize:none;", @class = "form-control", placeholder=" " })
+                       @Html.TextAreaFor(m => m.message, 10, 10, new {@class = "form-control no-resize width-100 height-100", placeholder=" " })
                        @Html.LabelFor(m=>m.message)
+                       @Html.ValidationMessageFor(m=>m.message)
                       </div>
                       
                         
@@ -21,10 +23,12 @@
                             <span class="has-float-label">
                                 @Html.TextBoxFor(m => m.n, new { style = "width:50%; height:10%;", @class = "form-control", placeholder = "Enter N" })
                                 @Html.LabelFor(m => m.n)
+                                @Html.ValidationMessageFor(m=>m.n)
                             </span>
                             <span class="has-float-label">
                                 @Html.TextBoxFor(m => m.e, new { style = "width:50%; height:10%;", @class = "form-control", placeholder = "Enter E" })
                                 @Html.LabelFor(m => m.e)
+                                @Html.ValidationMessageFor(m=>m.e)
                             </span>
                             <button type="submit" class="btn btn-success align-self-center" style="z-index:1;">Encode!</button>
                         </div>

@@ -38,9 +38,9 @@ namespace WebUI.Controllers
         {
             //Each request causes creating new Controller model, which causes creating new RSAAlgorithm model, so key values
             //will be different each time thanks to setValues() method in RSAAlgorithm constructor
-            MessageViewModel messageModel = new MessageViewModel() { d = rsa.d, e = rsa.e, n=rsa.n  };
-            
-            return PartialView("WalletDataPartialView", messageModel);
+
+            WalletViewModel walletModel = new WalletViewModel() { d = rsa.d, e = rsa.e, n=rsa.n  };
+            return PartialView("WalletDataPartialView", walletModel);
         }
 
         public PartialViewResult MessageEncoder()
@@ -51,7 +51,8 @@ namespace WebUI.Controllers
 
         public PartialViewResult GetEncodedMessage(MessageViewModel messageView)
         {
-            if (messageView.message != null)
+            
+            if (ModelState.IsValid && messageView!=null)
             {
                 List<int> encodedLetters = rsa.EncodeMessage(messageView.message, messageView.n, messageView.e);
                 return PartialView("EncodeDataPartialView", encodedLetters);

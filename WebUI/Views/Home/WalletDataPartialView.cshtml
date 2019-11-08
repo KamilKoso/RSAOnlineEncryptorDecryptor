@@ -1,4 +1,4 @@
-﻿@model WebUI.Models.MessageViewModel
+﻿@model WebUI.Models.WalletViewModel
 @{
     ViewBag.Title = "WalletDataPartialView";
 }
@@ -9,14 +9,28 @@
         <div class=" row form-group">
             <div class="col-md-2">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#privateKey">Private Key</button>
-                <div id="privateKey" class="collapse">
-                    <p>[N: @Model.n ,D: @Model.d]</p>
+                <div id="privateKey" class="collapse form-inline mt-3">
+                    <div class="has-float-label" style = "height:50%; width:50%">
+                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "N" })
+                        @Html.LabelFor(m => m.n)
+                    </div>
+                    <div class="has-float-label" style = "height:50%; width:50%">
+                        @Html.TextBoxFor(m=>m.e, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "D" })
+                        @Html.LabelFor(m => m.d)
+                    </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#publicKey">Public Key</button>
-                <div id="publicKey" class="collapse">
-                    <p>[N: @Model.n ,E: @Model.e]</p>
+                <div id="publicKey" class="collapse form-inline mt-3">
+                    <div class="has-float-label" style="height:50%; width:50%">
+                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "N" })
+                        @Html.LabelFor(m => m.n)
+                    </div>
+                    <div class="has-float-label" style="height:50%; width:50%">
+                        @Html.TextBoxFor(m => m.e, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "E" })
+                        @Html.LabelFor(m => m.e)
+                    </div>
                 </div>
             </div>
         </div>
