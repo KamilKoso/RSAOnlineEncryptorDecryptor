@@ -8,16 +8,31 @@ namespace WebUI.Models
 {
     public class DecodeMessageViewModel
     {
-        [Display(Name = "N")]
-        [Required(ErrorMessage = "Value N is required !")]
-        [Range(2, int.MaxValue)]
+        [Required]
         public int n { get; set; }
-
-        [Display(Name = "D")]
-        [Required(ErrorMessage = "Value D is required !")]
-        [Range(2, int.MaxValue)]
+        [Required]
         public int d { get; set; }
+        [Required]
+        public string EncodedMessage { get; set; }
 
-        //TODO: add here collection for coded numbers that will be decoded
+
+        public List<int> StringParser(string stringToParse)
+        {
+            //Splits values seperated by space, and adds it to the List<int>
+            //in order to decode it in RSA
+
+            List<int> list = new List<int>();
+            string[] tab = stringToParse.Split(' ');
+            int parsedValue;
+            bool result = true;
+            foreach (string str in tab)
+            {
+                if (!result)
+                    return new List<int>();
+               result=Int32.TryParse(str, out parsedValue);
+                list.Add(parsedValue);
+            }
+            return list;
+        }
     }
 }

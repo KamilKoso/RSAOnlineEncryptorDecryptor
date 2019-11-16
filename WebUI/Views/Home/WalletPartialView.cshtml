@@ -14,11 +14,11 @@
     }
 
 </script>
-<div class="container-fluid">
+<div class="container">
     <div class="jumbotron">
         @Html.Action("GetWalletData")
         <div class="row form-group">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "KeyValues", LoadingElementId = "loading", LoadingElementDuration = 300, Url = Url.Action("GetWalletData"), OnBegin = "hide('KeyValues')", OnComplete = "show('KeyValues')",HttpMethod="Post" }))
                 {
                     @Html.AntiForgeryToken()

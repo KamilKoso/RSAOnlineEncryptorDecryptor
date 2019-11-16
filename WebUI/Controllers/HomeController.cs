@@ -52,7 +52,7 @@ namespace WebUI.Controllers
         public PartialViewResult GetEncodedMessage(MessageViewModel messageView)
         {
             
-            if (ModelState.IsValid && messageView!=null)
+            if (ModelState.IsValid)
             {
                 List<int> encodedLetters = rsa.EncodeMessage(messageView.message, messageView.n, messageView.e);
                 return PartialView("EncodeDataPartialView", encodedLetters);
@@ -61,6 +61,26 @@ namespace WebUI.Controllers
             {
                 return PartialView("EncodeDataPartialView");
             }
+        }
+
+        public PartialViewResult MessageDecoder()
+        {
+
+            return PartialView("DecodePartialView");
+        }
+
+        public PartialViewResult GetDecodedMessage(DecodeMessageViewModel messageToDecode)
+        {
+            if (ModelState.IsValid)
+            {
+                while(messageToDecode.EncodedMessage[messageToDecode.EncodedMessage.Length-1] == ' ')
+                   messageToDecode.EncodedMessage=messageToDecode.EncodedMessage.Remove(messageToDecode.EncodedMessage.Length - 1); //Removes space if there is any at the end of given string
+
+                string message = rsa.DecodeMessage(messageToDecode.StringParser(messageToDecode.EncodedMessage), messageToDecode.n, messageToDecode.d);
+                return PartialView("DecodedDataPartialView", message);
+            }
+            else
+                return PartialView("DecodedDataPartialView");
         }
     }
 }

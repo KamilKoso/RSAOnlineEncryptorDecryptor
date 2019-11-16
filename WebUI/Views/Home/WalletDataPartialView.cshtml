@@ -5,33 +5,31 @@
 
 
     <div class="lds-roller" id="loading" role="status" style="display: none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    <div id="KeyValues">
-        <div class=" row form-group">
+    <div id="KeyValues" class="row form-group ">
             <div class="col-md-2">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#privateKey">Private Key</button>
-                <div id="privateKey" class="collapse form-inline mt-3">
-                    <div class="has-float-label" style = "height:50%; width:50%">
-                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "N" })
+                <div id="privateKey" class="collapse">
+                    <div class="has-float-label mt-3">
+                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:50%", placeholder = "N" })
                         @Html.LabelFor(m => m.n)
                     </div>
-                    <div class="has-float-label" style = "height:50%; width:50%">
-                        @Html.TextBoxFor(m=>m.e, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "D" })
+                    <div class="has-float-label">
+                        @Html.TextBoxFor(m=>m.d, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:50%", placeholder = "D" })
                         @Html.LabelFor(m => m.d)
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#publicKey">Public Key</button>
-                <div id="publicKey" class="collapse form-inline mt-3">
-                    <div class="has-float-label" style="height:50%; width:50%">
-                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "N" })
+                <div id="publicKey" class="collapse">
+                    <div class="has-float-label mt-3">
+                        @Html.TextBoxFor(m => m.n, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:50%;", placeholder = "N" })
                         @Html.LabelFor(m => m.n)
                     </div>
-                    <div class="has-float-label" style="height:50%; width:50%">
-                        @Html.TextBoxFor(m => m.e, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:100%", placeholder = "E" })
+                    <div class="has-float-label">
+                        @Html.TextBoxFor(m => m.e, new { @readonly = "readonly", @class = "form-control", style = "height:100%; width:50%;", placeholder = "E" })
                         @Html.LabelFor(m => m.e)
                     </div>
                 </div>
             </div>
-        </div>
     </div>

@@ -20,17 +20,17 @@
                       
                         
                         <div class="form-inline mt-2">
-                            <span class="has-float-label">
-                                @Html.TextBoxFor(m => m.n, new { style = "width:30%; height:10%;", @class = "form-control", placeholder = "Enter N" })
+                            <div class="has-float-label">
+                                @Html.TextBoxFor(m => m.n, new { @class = "form-control w-50 h-50", placeholder = "Enter N" })
                                 @Html.LabelFor(m => m.n)
                                 @Html.ValidationMessageFor(m=>m.n)
-                            </span>
-                            <span class="has-float-label">
-                                @Html.TextBoxFor(m => m.e, new { style = "width:30%; height:10%;", @class = "form-control", placeholder = "Enter E" })
+                            </div>
+                            <div class="has-float-label">
+                                @Html.TextBoxFor(m => m.e, new { @class = "form-control w-50 h-50", placeholder = "Enter E" })
                                 @Html.LabelFor(m => m.e)
                                 @Html.ValidationMessageFor(m=>m.e)
-                            </span>
-                            <button type="submit" class="btn btn-success align-self-center" style="z-index:1;">Encode!</button>
+                            </div>
+                            <button type="submit" class="btn btn-success align-self-end" style="z-index:1;">Encode!</button>
                         </div>
                         
                         
