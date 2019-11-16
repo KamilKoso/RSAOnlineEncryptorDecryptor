@@ -1,0 +1,19 @@
+﻿@model List<int>
+@{ 
+ ViewBag.Title = "MessageViewModel";
+}
+
+<div id="EncodedMessage">
+
+    <textarea readonly="readonly" rows="10" cols="10" class="form-control no-resize width-100 height-100">
+    @if (Model != null)
+    {
+      
+        foreach (int i in Model)
+        {
+           @String.Concat(i.ToString(), " ");
+        }
+    }
+ </textarea>
+</div>
+

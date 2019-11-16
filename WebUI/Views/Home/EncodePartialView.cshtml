@@ -1,0 +1,49 @@
+﻿@model WebUI.Models.MessageViewModel
+@{
+    ViewBag.Title = "EncodePartialView";
+}
+
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                
+                    @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "EncodedMessage", LoadingElementId = "encoding", LoadingElementDuration = 300, Url = Url.Action("GetEncodedMessage"), HttpMethod = "Post" }))
+                    {
+                        @Html.AntiForgeryToken()
+                      <div class="has-float-label">
+                       @Html.TextAreaFor(m => m.message, 10, 10, new {@class = "form-control no-resize width-100 height-100", placeholder=" " })
+                       @Html.LabelFor(m=>m.message)
+                       @Html.ValidationMessageFor(m=>m.message)
+                      </div>
+                      
+                        
+                        <div class="form-inline mt-2">
+                            <div class="has-float-label">
+                                @Html.TextBoxFor(m => m.n, new { @class = "form-control w-50 h-50", placeholder = "Enter N" })
+                                @Html.LabelFor(m => m.n)
+                                @Html.ValidationMessageFor(m=>m.n)
+                            </div>
+                            <div class="has-float-label">
+                                @Html.TextBoxFor(m => m.e, new { @class = "form-control w-50 h-50", placeholder = "Enter E" })
+                                @Html.LabelFor(m => m.e)
+                                @Html.ValidationMessageFor(m=>m.e)
+                            </div>
+                            <button type="submit" class="btn btn-success align-self-end" style="z-index:1;">Encode!</button>
+                        </div>
+                        
+                        
+                    }
+                
+            </div>
+            
+
+            <div class="col-md-6">
+                @Html.Action("GetEncodedMessage")
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -188,3 +188,16 @@ C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.pdb
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Domain.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Domain.pdb
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\WebActivator.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.Web.Common.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.Web.Mvc.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.xml
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.Web.Common.xml
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\Ninject.Web.Mvc.xml
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\WebActivatorEx.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\AjaxMin.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\HtmlAgilityPack.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\WebCompiler.dll
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\HtmlAgilityPack.pdb
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\HtmlAgilityPack.xml
+C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\WebCompiler.pdb
