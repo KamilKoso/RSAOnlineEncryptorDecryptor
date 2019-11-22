@@ -3,46 +3,54 @@
     ViewBag.Title = "DecodePartialView";
 }
 
+    <script type="text/javascript">
+        var onSuccess = function (decoding) {
+            // enable unobtrusive validation for the contents
+            // that was injected into the <div id="result"></div> node
+            $.validator.unobtrusive.parse($(decoding));
+        };
+    </script>
+
 <div class="container-fluid">
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
 
-            @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "DecodedMessage", LoadingElementId = "decoding", LoadingElementDuration = 300, Url = Url.Action("GetDecodedMessage"), HttpMethod = "Post" }))
-            {
-                @Html.AntiForgeryToken()
-                <div class="has-float-label">
-                    @Html.TextAreaFor(m => m.EncodedMessage, 10, 10, new { @class = "form-control no-resize width-100 height-100", placeholder = " " })
-                    @Html.LabelFor(m => m.EncodedMessage)
-                    @Html.ValidationMessageFor(m => m.EncodedMessage)
-                </div>
-
-
-                <div class="form-inline mt-2">
+                @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "DecodedMessage", LoadingElementId = "decoding", LoadingElementDuration = 300, Url = Url.Action("GetDecodedMessage"), HttpMethod = "Post", OnSuccess= "onSuccess" }))
+                {
+                    @Html.AntiForgeryToken()
                     <div class="has-float-label">
-                        @Html.TextBoxFor(m => m.n, new { @class = "form-control w-50 h-50", placeholder = "Enter N" })
-                        @Html.LabelFor(m => m.n)
-                        @Html.ValidationMessageFor(m => m.n)
+                        @Html.TextAreaFor(m => m.EncodedMessage, 10, 10, new { @class = "form-control no-resize width-100 height-100", placeholder = " " })
+                        @Html.LabelFor(m => m.EncodedMessage)
+                        @Html.ValidationMessageFor(m => m.EncodedMessage)
                     </div>
-                    <div class="has-float-label">
-                        @Html.TextBoxFor(m => m.d, new { @class = "form-control w-50 h-50", placeholder = "Enter D" })
-                        @Html.LabelFor(m => m.d)
-                        @Html.ValidationMessageFor(m => m.d)
+
+
+                    <div class="form-inline mt-2">
+                        <div class="has-float-label">
+                            @Html.TextBoxFor(m => m.n, new { @class = "form-control w-50 h-50", placeholder = "Enter N" })
+                            @Html.LabelFor(m => m.n)
+                            @Html.ValidationMessageFor(m => m.n)
+                        </div>
+                        <div class="has-float-label">
+                            @Html.TextBoxFor(m => m.d, new { @class = "form-control w-50 h-50", placeholder = "Enter D" })
+                            @Html.LabelFor(m => m.d)
+                            @Html.ValidationMessageFor(m => m.d)
+                        </div>
+                        <button type="submit" class="btn btn-success align-self-end" style="z-index:1;">Decode!</button>
                     </div>
-                    <button type="submit" class="btn btn-success align-self-end" style="z-index:1;">Decode!</button>
-                </div>
 
 
-            }
+                }
 
-        </div>
+            </div>
 
 
-        <div class="col-md-6">
-            @Html.Action("GetDecodedMessage")
+            <div class="col-md-6">
+                @Html.Action("GetDecodedMessage")
 
+            </div>
         </div>
     </div>
-</div>
 </div>
 

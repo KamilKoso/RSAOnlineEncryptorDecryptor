@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="~/Styles/textarea-w100h100-no-resize.css" />
     <link rel="stylesheet" href="~/Styles/ErrorStyles.css" />
 
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-   
-
-    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
 </head>
 <body style="background-color:grey">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,7 +38,7 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
+   
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

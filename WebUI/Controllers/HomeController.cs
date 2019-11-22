@@ -80,6 +80,7 @@ namespace WebUI.Controllers
                 return PartialView("DecodedDataPartialView", message);
             }
             else
+                
                 return PartialView("DecodedDataPartialView");
         }
     }
