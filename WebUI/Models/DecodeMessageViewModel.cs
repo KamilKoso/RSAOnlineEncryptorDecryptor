@@ -8,9 +8,16 @@ namespace WebUI.Models
 {
     public class DecodeMessageViewModel
     {
-        [Required]
+        [Display(Name = "N")]
+        [Required(ErrorMessage = "Value N is required !")]
+        [Range(2, int.MaxValue, ErrorMessage = "Provided value is incorrect !")]
+        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         public int n { get; set; }
-        [Required]
+
+        [Display(Name = "D")]
+        [Required(ErrorMessage = "Value D is required !")]
+        [Range(2, int.MaxValue, ErrorMessage = "Provided value is incorrect !")]
+        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         public int d { get; set; }
         [Required]
         public string EncodedMessage { get; set; }

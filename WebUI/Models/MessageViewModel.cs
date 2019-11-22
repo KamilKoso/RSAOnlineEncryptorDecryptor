@@ -10,12 +10,14 @@ namespace WebUI.Models
     {
         [Display(Name ="N")]
         [Required(ErrorMessage = "Value N is required !")]
-        [Range(2, int.MaxValue)]
+        [Range(2, int.MaxValue, ErrorMessage ="Provided value is incorrect !")]
+        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         public int n { get; set; }
 
-        [Required(ErrorMessage = "Value E is required !")]
+        [Required(ErrorMessage = "Value N is required !")]
+        [Range(2, int.MaxValue, ErrorMessage = "Provided value is incorrect !")]
+        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         [Display(Name ="E")]
-        [Range(2, int.MaxValue)]
         public int e { get; set; }
 
         [Display(Name ="Enter your message to encode")]

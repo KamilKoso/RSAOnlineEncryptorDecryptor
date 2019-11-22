@@ -3,20 +3,14 @@
     ViewBag.Title = "DecodePartialView";
 }
 
-    <script type="text/javascript">
-        var onSuccess = function (decoding) {
-            // enable unobtrusive validation for the contents
-            // that was injected into the <div id="result"></div> node
-            $.validator.unobtrusive.parse($(decoding));
-        };
-    </script>
+    
 
 <div class="container-fluid">
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-6">
 
-                @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "DecodedMessage", LoadingElementId = "decoding", LoadingElementDuration = 300, Url = Url.Action("GetDecodedMessage"), HttpMethod = "Post", OnSuccess= "onSuccess" }))
+                @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "DecodedMessage", LoadingElementId = "decoding", LoadingElementDuration = 300, Url = Url.Action("GetDecodedMessage"), HttpMethod = "Post"}))
                 {
                     @Html.AntiForgeryToken()
                     <div class="has-float-label">
