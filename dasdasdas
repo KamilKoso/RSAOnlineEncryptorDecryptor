@@ -1,0 +1,108 @@
+[33mcommit 73bc2a0df8cd5447ba85031db1b803e9f85c25e8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mRSAOnlineMessenger/master[m[33m)[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Fri Nov 22 18:14:32 2019 +0100
+
+    Client side validation is working, there's still bug with enlargement of N/D/E textbox when provided value to the textbox is incorrect
+
+[33mcommit 1e4616fc59bfab361b690f23fade52582b7125b6[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Fri Nov 22 17:54:18 2019 +0100
+
+    Finally got to work client side validation, however this caused bug that when errors are loaded, N,D labels are getting it's defauld width and height
+
+[33mcommit 209c2dd55f6530353faca4dc3b8947d7a37a4c60[m
+Merge: bf2472f 97d8b54
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sat Nov 16 15:24:51 2019 +0100
+
+    Working prototype. Still few bugs. Validation dont show errors, wallet values doesen't allign properly. code is mess
+
+[33mcommit 97d8b54ebb722832a288881157ff0409fb2f30f1[m[33m ([m[1;31mRSAOnlineMessenger/ExperimentalBranch[m[33m, [m[1;32mExperimentalBranch[m[33m)[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sat Nov 16 15:17:58 2019 +0100
+
+    Working prototype. Added decoding logic and view. Still few bugs needs to be fixed. Validation dont show errors, wallet values doesen't allign properly.
+
+[33mcommit 7d59fa443352e90679254ca70af00f780439258b[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Nov 10 11:49:48 2019 +0100
+
+    Updated boostrapr
+
+[33mcommit 8c9538b72a5ba2ce69ef3722632ec758d0fc39e2[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Fri Nov 8 19:47:34 2019 +0100
+
+    Changed wallet preview from <p> to <textbox readonly=>
+
+[33mcommit 0cfc89416bf1aab7b4e56a22a1b5c0f879ccf0ed[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Nov 3 16:40:37 2019 +0100
+
+    Aligment fixes, floating labels working
+
+[33mcommit c6a02960734c9b4b0c74690272fc8bbab37d94d4[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Nov 3 14:49:38 2019 +0100
+
+    Added floating labels, still need to align textarea's properly
+
+[33mcommit 7e12d2bba49e68571ea94feed2e1938dc8fb8cd1[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sat Nov 2 18:26:25 2019 +0100
+
+    Added floating labels, however they're not working properly, need to be fixed.
+
+[33mcommit 26c459d039b7058816c87a3dd33b42cf5073b438[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sat Nov 2 10:30:00 2019 +0100
+
+    Centered, and made fully clickable 'Encode' button, fixed bug with hiding public private key buttons, when encode button was clicked.
+
+[33mcommit 16a83de19cfd75461d52d2e1e1788c2f7de36d11[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Oct 27 19:20:47 2019 +0100
+
+    Improved RSA algorithm
+
+[33mcommit f96135949b30e940e678aacd1d45bc71a043d35a[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Thu Oct 24 20:20:04 2019 +0200
+
+    Bootstrap fixes, added changes to homecontroller
+
+[33mcommit 8d5c34c6bac7344b164407788998d8a862e90fec[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Tue Oct 22 21:28:27 2019 +0200
+
+    Encode form created, not working yet, Updated Bootstrap to ver. 4
+
+[33mcommit bf2472f223d0503b9b18ffc544e7826374cac25e[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Mon Oct 21 22:56:37 2019 +0200
+
+    Working RSA key generator, working on encryption form, mering to master
+
+[33mcommit c01664d49df0c485d02fe62a296634cfc12f7412[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Mon Oct 21 22:52:56 2019 +0200
+
+    Working and well placed keys generator, now working on encrypt form
+
+[33mcommit 6016f20b54103bf4d6e5f79ccacc243f99d2f927[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Oct 13 17:36:04 2019 +0200
+
+    Working Ninject
+
+[33mcommit c04b169b64548e260cf27c36a68a11a058aa305f[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Oct 13 15:19:13 2019 +0200
+
+    =Working commit, No Ninject, ninject causes reference problems in Web.config
+
+[33mcommit 9bb7c2dabb75a4ca1261ba415fccd2c2b5e21946[m
+Author: Kamil Kosobudzki <kamilkosobudzki1@gmail.com>
+Date:   Sun Oct 13 15:15:56 2019 +0200
+
+    =First Commit

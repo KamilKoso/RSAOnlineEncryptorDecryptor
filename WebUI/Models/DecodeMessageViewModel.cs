@@ -11,13 +11,13 @@ namespace WebUI.Models
         [Display(Name = "N")]
         [Required(ErrorMessage = "Value N is required !")]
         [Range(2, int.MaxValue, ErrorMessage = "Provided value is incorrect !")]
-        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         public int n { get; set; }
 
         [Display(Name = "D")]
         [Required(ErrorMessage = "Value D is required !")]
         [Range(2, int.MaxValue, ErrorMessage = "Provided value is incorrect !")]
-        [RegularExpression("([2-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Provided value is incorrect !")]
         public int d { get; set; }
         [Required]
         public string EncodedMessage { get; set; }
@@ -39,7 +39,7 @@ namespace WebUI.Models
                result=Int32.TryParse(str, out parsedValue);
                 list.Add(parsedValue);
             }
-            return list;
+            return list;    
         }
     }
 }
