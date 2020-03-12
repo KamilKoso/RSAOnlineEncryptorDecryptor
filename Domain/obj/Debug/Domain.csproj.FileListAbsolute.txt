@@ -1,6 +1,5 @@
 C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\bin\Debug\Domain.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\bin\Debug\Domain.pdb
 C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
-C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\obj\Debug\Domain.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\Domain\obj\Debug\Domain.pdb

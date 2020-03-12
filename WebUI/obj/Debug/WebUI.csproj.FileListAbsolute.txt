@@ -181,7 +181,6 @@ C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\pl\System.Web.WebPages.
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\pl\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\bin\pl\System.Web.WebPages.Razor.resources.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.csprojAssemblyReference.cache
-C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.csproj.CopyComplete
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.dll
 C:\Users\Admin\source\repos\RSAOnlineMessenger\WebUI\obj\Debug\WebUI.pdb
